@@ -3,7 +3,7 @@ const app = express();
 require('dotenv').config();
 const PORT = process.env.PORT || 8080;
 require('./models/dbConnection');
-const authRouter = require('./routes/authrouter')
+const authRouter = require('./routes/authRouter')
 const jobRouter = require('./routes/jobRouter');
 const mailRouter = require('./routes/mailRouter');
 const cors = require('cors');
