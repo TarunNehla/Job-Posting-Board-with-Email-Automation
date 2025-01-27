@@ -37,7 +37,7 @@ function Dashboard() {
     };
 
     try {
-      await axios.post('/mail/send-mail', emailData, {
+      await axios.post('http://localhost:8080/mail/send-mail', emailData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -53,7 +53,7 @@ function Dashboard() {
   const handleDeleteJob = async (jobId) => {
     const token = userInfo.token;
     try {
-      await axios.delete(`/api/job-delete/${jobId}`, {
+      await axios.delete(`http://localhost:8080/api/job-delete/${jobId}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }

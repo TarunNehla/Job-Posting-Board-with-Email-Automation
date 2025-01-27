@@ -46,7 +46,7 @@ function PostJob () {
     const token = userInfo.token;
 
     try {
-        await axios.post('/api/job-post', jobData, {
+        await axios.post('http://localhost:8080/api/job-post', jobData, {
           headers: {
             Authorization: `Bearer ${token}`
           }

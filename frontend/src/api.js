@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const authApi = axios.create({
-    baseURL: '/auth',
+    baseURL: 'http://localhost:8080/auth',
 });
   
   // Google authentication
@@ -9,7 +9,7 @@ const authApi = axios.create({
   
 
 const api = axios.create({
-    baseURL: '',
+    baseURL: 'http://localhost:8080',
 });
 
 export const fetchJobs = async () => {
