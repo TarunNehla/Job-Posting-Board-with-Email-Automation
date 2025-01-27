@@ -1,0 +1,9 @@
+POST http://localhost:8080/mail/send-mail
+Content-Type: application/json
+# Authorization: Bearer ACCESS_TOKEN
+{
+    "to": "tarundh30@gmail.com",
+    "subject": "Test Email",
+    "text": "This is a test email sent from the backend.",
+    "html": "<p>This is a test email sent from the backend.</p>"
+}

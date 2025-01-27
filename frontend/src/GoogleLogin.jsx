@@ -10,12 +10,12 @@ function GoogleLogin() {
         console.log(authResult);
         if(authResult['code']){
           const result = await googleAuth(authResult['code']);
-          const {email, name,image} = result.data.user;
+          const {_id,email, name,image} = result.data.user;
           const token = result.data.token;
-          const obj = {email, name, image, token};
+          const obj = {_id,email, name, image, token};
           localStorage.setItem('user-info', JSON.stringify(obj));
-          console.log('token : ', token)
-          console.log('email name and image', result.data.user);
+          // console.log('token : ', token)
+          // console.log('email name and image', result.data.user);
           navigate('/dashboard');
         }
     }
@@ -30,8 +30,9 @@ function GoogleLogin() {
     flow : 'auth-code' 
   });
   return (
-    <div>
-      <button onClick={googleLogin}>Login</button>
+    <div className='userInfo'>
+      <h1>Welcome , Get Started Here</h1>
+      <button className='btton' onClick={googleLogin}>Login</button>
     </div>
   );
 }

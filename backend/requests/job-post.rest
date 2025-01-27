@@ -1,0 +1,11 @@
+POST http://localhost:8080/api/job-post
+Content-Type: application/json
+# Authorization: Bearer YOUR_ACCESS_TOKEN
+{
+    "userId": "67976facf19ab954fa486248",
+    "title": "Software Engineer",
+    "description": "We are looking for a skilled software engineer to join our team.",
+    "experienceLevel": "INTERMEDIATE",
+    "candidates": ["candidate@example.com"],
+    "endDate": "2023-12-31"
+}

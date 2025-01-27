@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route,Navigate, NavigationType } from 'react-router-dom';
 import GoogleLogin from './GoogleLogin'; 
-import Dashboard from './Dashboard';
+import Dashboard from './Dashboard/Dashboard';
+import PostJob from './PostJob';
 import PageNotFound from './PageNotFound';
 import { useState } from 'react';
 import { GoogleOAuthProvider } from '@react-oauth/google';
@@ -28,6 +29,7 @@ function App() {
         <Route path="/login" element={<GoogleAuthWrapper />} /> 
         <Route path="/" element={<Navigate to="/login"/>} /> 
         <Route path='/dashboard' element={<PrivateRoute element={<Dashboard/>}/>}/>
+        <Route path="/post-job" element={<PrivateRoute element={<PostJob />} />} />
         <Route path="*" element={<PageNotFound />} /> 
       </Routes>
     </BrowserRouter>

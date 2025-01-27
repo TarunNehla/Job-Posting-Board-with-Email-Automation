@@ -1,0 +1,4 @@
+DELETE http://localhost:8080/api/job-delete/67971b8ec2dce48b021c9056
+# Authorization: Bearer YOUR_ACCESS_TOKEN
+# Content-Type: application/json
+
